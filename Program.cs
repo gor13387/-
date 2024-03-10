@@ -41,6 +41,43 @@
             }
         }
 
-        
+        // Вывод исходного и нового массива
+        PrintArray(array);
+        Console.Write(" → ");
+        PrintArray(newArray);
+  
+
+    // Функция: Вывод списка команд для работы с программой
+    static void Commands()
+    {
+        Console.WriteLine();
+        Console.WriteLine("СПИСОК КОМАНД:");
+        Console.WriteLine("1 – использовать массив: [“Hello”, “2”, “world”, “:-)”]");
+        Console.WriteLine("2 – использовать массив: [“1234”, “1567”, “-2”, “computer science”]");
+        Console.WriteLine("3 – использовать массив: [“Russia”, “Denmark”, “Kazan”]");
+        Console.WriteLine();
+    }
+
+    // Функция ввода данных с консоли
+    static string ReadInput(string msg)
+    {
+        Console.Write(msg);
+        return Console.ReadLine();
+    }
+
+    // Функция вывода массива в консоль
+    static void PrintArray(string[] array)
+    {
+        Console.Write("[ ");
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write($"“{array[i]}”");
+            if (i < array.Length - 1)
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.Write(" ]");
+    }
 
 
