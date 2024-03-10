@@ -22,5 +22,25 @@
                 break;
         }
 
+        // Подсчет количества элементов, удовлетворяющих условию длины <= 3
+        int lenNewArray = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i].Length <= 3) lenNewArray++;
+        }
+
+        // Создание нового массива и заполнение его элементами, удовлетворяющими условию
+        string[] newArray = new string[lenNewArray];
+        int idx = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i].Length <= 3)
+            {
+                newArray[idx] = array[i];
+                idx++;
+            }
+        }
+
         
+
 
